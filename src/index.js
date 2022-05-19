@@ -1,7 +1,7 @@
-import {text} from "./js/home"
-import './style/style.css'
-import Logo from "./public/image/logo.png"
-import print from "./print"
+import { text } from './js/home';
+import './style/style.css';
+import Logo from './public/image/logo.png';
+import print from './print';
 
 function component() {
     const root = document.createElement('div');
@@ -11,7 +11,7 @@ function component() {
     root.classList.add('hello');
 
     button.innerHTML = 'click me';
-    button.onclick = print
+    button.onclick = print;
 
     const logo = new Image();
     logo.src = Logo;

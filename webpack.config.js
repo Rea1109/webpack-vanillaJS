@@ -6,7 +6,7 @@ module.exports = {
     // entry: './src/index.js',
     entry: {
         index: './src/index.js',
-        print: './src/print.js'
+        print: './src/print.js',
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -39,7 +39,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
-                type: 'asset/resource'
+                type: 'asset/resource',
             },
         ],
     },

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "MainFont";
+    font-family: 'MainFont';
     src: url('../public/font/BMHANNAPro.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
@@ -12,6 +12,6 @@
 }
 
 .hello {
-    font-family: "MainFont";
+    font-family: 'MainFont';
     color: gold;
 }

@@ -1,1 +1,1 @@
-export const text = "welcom webpack"
+export const text = 'welcom webpack';
