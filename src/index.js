@@ -1,25 +1,17 @@
-import { text } from './js/home';
-import './style/style.css';
-import Logo from './public/image/logo.png';
-import print from './print';
+import './style/index.css';
+import navbar from './js/navbar';
+import main from './js/main';
+import footer from './js/footer';
 
-function component() {
-    const root = document.createElement('div');
-    const button = document.createElement('button');
+function app() {
+    const $root = document.createElement('div');
+    $root.setAttribute('id', 'root');
 
-    root.innerHTML = text;
-    root.classList.add('hello');
+    $root.appendChild(navbar());
+    $root.appendChild(main());
+    $root.appendChild(footer());
 
-    button.innerHTML = 'click me';
-    button.onclick = print;
-
-    const logo = new Image();
-    logo.src = Logo;
-
-    root.appendChild(button);
-    root.appendChild(logo);
-
-    return root;
+    return $root;
 }
 
-document.body.appendChild(component());
+document.body.appendChild(app());
