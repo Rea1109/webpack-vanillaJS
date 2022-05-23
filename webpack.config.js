@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    // entry: './src/index.js',
     entry: {
         index: './src/index.js',
     },
@@ -13,12 +12,10 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            // title: 'Output Management',
             title: 'Development',
         }),
     ],
     output: {
-        // filename: 'bundle.js',
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
@@ -35,10 +32,16 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'public/image/[hash][ext][query]',
+                },
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',
+                generator: {
+                    filename: 'public/font/[hash][ext][query]',
+                },
             },
         ],
     },

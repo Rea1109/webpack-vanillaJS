@@ -1,17 +1,24 @@
+import navbar from './js/component/common/navbar';
 import './style/index.css';
-import navbar from './js/navbar';
-import main from './js/main';
-import footer from './js/footer';
 
 function app() {
     const $root = document.createElement('div');
     $root.setAttribute('id', 'root');
 
-    $root.appendChild(navbar());
-    $root.appendChild(main());
-    $root.appendChild(footer());
+    $root.append(navbar());
 
     return $root;
 }
 
 document.body.appendChild(app());
+
+document.body.addEventListener('click', (event) => {
+    if (event.target.href) {
+        event.preventDefault();
+        console.log('body click');
+    }
+});
+
+window.addEventListener('popstate', () => {
+    console.log('popevent');
+});

@@ -5,39 +5,34 @@
     font-style: normal;
 }
 
+:root {
+    --gray-color: #e5e5e5;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'MainFont';
 }
 
 #root {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    font-family: 'MainFont';
-    text-align: center;
+    width: 100%;
+    height: 1080px;
 }
 
-.navigation {
-    position: fixed;
-    top: 0px;
+.navbar {
     width: 100%;
-    height: 10%;
+    height: 100px;
+    padding: 20px;
     background-color: white;
+    border: 1px solid black;
 }
 
-.main {
-    width: 100%;
-    height: 80%;
-    margin-top: 130px;
-    background-color: white;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 20%;
-    background-color: #e5e5e5;
+.navbar div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
 }
